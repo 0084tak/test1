@@ -1,0 +1,32 @@
+
+---
+
+## ■ 最低限のサンプルコード（Backend）
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+lockers = {
+    1: {"status": "closed"},
+    2: {"status": "closed"}
+}
+
+@app.get("/lockers")
+def get_lockers():
+    return lockers
+
+@app.post("/locker/{locker_id}/open")
+def open_locker(locker_id: int):
+    lockers[locker_id]["status"] = "open"
+    return {"message": f"Locker {locker_id} opened"}
+
+import RPi.GPIO as GPIO
+
+LOCK_PIN = 18
+
+def open_locker():
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(LOCK_PIN, GPIO.OUT)
+    GPIO.output(LOCK_PIN, True)
