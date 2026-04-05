@@ -1,0 +1,32 @@
+## LINE Mini App Architecture
+
+### User Flow
+
+1. ユーザーがLINEでQRコードをスキャン
+2. LINEミニアプリ起動
+3. 商品選択
+4. 決済（LINE Pay）
+5. ロッカー解錠
+
+---
+
+### System Components
+
+- LINE Mini App (Frontend)
+- Backend API (FastAPI)
+- Payment (LINE Pay)
+- IoT Locker Controller
+
+---
+
+### Data Flow
+
+LINE → API → Locker
+
+---
+
+### Key Features
+
+- No app installation required
+- Instant access via QR
+- Seamless payment integration
