@@ -1,0 +1,25 @@
+# Smart Stock Locker
+
+次世代の無人受け取り・販売を実現するスマートロッカーシステム
+
+## 🚀 概要
+- 無人販売 + 在庫管理 + 決済 + IoT制御
+- 防災ストックと日常利用の融合
+- 顔認証 / LINEミニアプリ連携（予定）
+
+## 🧠 主な機能
+- 在庫管理API
+- ロッカー開閉制御
+- QR/顔認証による解錠
+- 決済連携（Stripe等）
+- リアルタイム在庫同期
+
+## 🏗 アーキテクチャ
+- Backend: Python (FastAPI)
+- Frontend: JavaScript
+- IoT: Raspberry Pi
+- Cloud: AWS / Firebase
+
+## ▶ 起動方法
+```bash
+docker-compose up
